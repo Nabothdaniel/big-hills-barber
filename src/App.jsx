@@ -27,7 +27,7 @@ function App() {
 			{isLoading ? (
 				<h1>loading......</h1>
 			) : (
-				<main className="bg-primary w-screen h-screen">
+				<main className="bg-primary w-screen h-screen custom-scrollbar">
 					<div className=" m-auto">
 						<Header />
 						<Outlet />
