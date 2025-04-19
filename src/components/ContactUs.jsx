@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -57,7 +58,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="bg-[#212123] py-16 md:py-20 px-28 text-white" id='contact-us'>
+    <section className="bg-[#212123] py-16 md:py-20 md:px-28 text-white" id='contact-us'>
       <div className="mx-2rem md:mx-auto grid md:grid-cols-2 gap-10 items-start">
         {/* Left: Info */}
         <div className='mx-[1rem]'>
@@ -74,6 +75,10 @@ const ContactUs = () => {
             <li className="flex items-start gap-3">
               <FiPhone className="text-amber-400 mt-1" />
               <a href="tel:+1234567890" className="hover:underline">+1 (234) 567-890</a>
+            </li>
+            <li className="flex items-start gap-3">
+              <FaWhatsapp className="text-amber-400 mt-1" />
+              <a href="tel:+1234567890" className="hover:underline">+1 (234)2356464</a>
             </li>
             <li className="flex items-start gap-3">
               <FiMail className="text-amber-400 mt-1" />

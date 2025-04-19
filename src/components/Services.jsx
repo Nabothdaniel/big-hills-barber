@@ -97,7 +97,7 @@ const Services = () => {
                                         {service.description || "This service is top-rated among our clients."}
                                     </p>
                                     <a
-                                        href="#"
+                                        href="#contact-us"
                                         className="bg-[#ad987d] w-full text-amber-400 dark:text-white dark:hover:text-amber-400  inline-flex items-center justify-center gap-3 py-2 px-3 rounded-sm md:p-0 transition mx-auto  md:hover:bg-[#8e7d67] md:hover:duration-300 hover:bg-gray-700 md:text-white md:py-2 md:px-5 md:rounded-md md:shadow-sm duration-300"
                                     >
                                         Contact Us
