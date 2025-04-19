@@ -1,5 +1,5 @@
 import AboutBigHills from "../components/AboutBigHills";
-import AboutUs from "../components/AboutUS";
+import AboutUs from "../components/AboutUs";
 import ContactUs from "../components/ContactUs";
 import Hero from "../components/hero";
 import OurWorks from "../components/OurWorks";
