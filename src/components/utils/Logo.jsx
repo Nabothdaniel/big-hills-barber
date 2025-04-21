@@ -1,4 +1,4 @@
-import HillsLogo from "../../assets/images/hills-logo.jpeg";
+import HillsLogo from "../../assets/images/hill-banner.jpeg";
 
 const Logo = () => {
     return (

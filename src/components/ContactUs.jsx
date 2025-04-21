@@ -89,7 +89,7 @@ const ContactUs = () => {
             </li>
             <li className="flex items-start gap-3">
               <FaWhatsapp className="text-amber-400 mt-1" />
-              <a href="https://wa.me/08064380673" className="hover:underline">08064380673</a>
+              <a href="https://wa.me/07043136258" className="hover:underline">07043136258</a>
             </li>
             <li className="flex items-start gap-3">
               <FiMail className="text-amber-400 mt-1" />
