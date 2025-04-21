@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+import Logo from './utils/Logo';
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Left Side: Branding */}
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-semibold mb-2">Big Hills</h3>
+         <Logo/>
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} All rights reserved.
           </p>

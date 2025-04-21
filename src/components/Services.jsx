@@ -11,9 +11,10 @@ import {  FaChevronRight } from "react-icons/fa";
 
 //images import 
 import Img1 from '../assets/images/hills-10.jpeg';
-import Img2 from '../assets/images/barber-2.jpg';
-import Img4 from '../assets/images/barber4.jpg';
-import Img5 from '../assets/images/barber5.jpg';
+import Img2 from '../assets/images/hills-20.jpeg';
+import Img3 from '../assets/images/barber4.jpg'
+import Img4 from '../assets/images/barber-2.jpg';
+import Img5 from '../assets/images/hill-6.jpeg';
 import Banner1 from '../assets/banners/banner1.png';
 
 const services = [
@@ -25,22 +26,22 @@ const services = [
     {
         title: "Beard Trim",
         description: "Sharp lines and neat trims to keep your beard looking sharp.",
-        icon: Img4,
+        icon: Img2,
     },
     {
         title: "Hot Towel Shave",
         description: "Relax with a traditional straight razor shave.",
-        icon: Img4,
+        icon: Img3,
     },
     {
         title: "Kids Cut",
         description: "Stylish and friendly cuts for kids of all ages.",
-        icon: Img2,
+        icon: Img4,
     },
     {
         title: "Dread Locks",
         description: "Dread locks styling and maintenance.",
-        icon: Img2,
+        icon: Img5,
     },
 ];
 
@@ -71,7 +72,7 @@ const Services = () => {
                 ))}
             </p>
             {/* Actual content sits above the background word */}
-            <h2 className="relative block md:hidden z-10 text-3xl font-bold mb-10 text-gray-800">Our Services</h2>
+            <h2 className="relative block md:hidden z-10 text-3xl font-bold mb-10 text-white">Our Services</h2>
 
             <div className="relative z-10 flex justify-center">
                 <Swiper

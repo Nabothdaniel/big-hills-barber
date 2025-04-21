@@ -4,7 +4,7 @@ import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '',subject:'', email: '', message: '' });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -21,6 +21,7 @@ const ContactUs = () => {
   const validateForm = () => {
     const validationErrors = {};
     if (!formData.name.trim()) validationErrors.name = 'Name is required';
+    if (!formData.subject.trim()) validationErrors.subject = 'Subject is required';
     if (!formData.email.trim()) {
       validationErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -31,31 +32,41 @@ const ContactUs = () => {
     return validationErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
-
+  
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      toast.error("Please fix the errors in the form", {
+      return;
+    }
+  
+    try {
+      const response = await fetch('https://big-hills-backend.onrender.com/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Something went wrong');
+      }
+  
+      toast.success("Message sent successfully!", {
         position: "top-right",
         autoClose: 3000,
       });
-      return;
+  
+      setFormData({ name: '', subject: '', email: '', message: '' });
+      setSubmitted(true);
+    } catch (error) {
+      toast.error("Failed to send message. Please try again later.");
+      console.error(error);
     }
-
-    // Simulate sending data
-    console.log("Submitted data:", formData);
-    setSubmitted(true);
-
-    toast.success("Message sent successfully!", {
-      position: "top-right",
-      autoClose: 3000,
-    });
-
-    // Clear form
-    setFormData({ name: '', email: '', message: '' });
   };
+  
 
   return (
     <section className="bg-[#212123] py-16 md:py-20 md:px-28 text-white" id='contact-us'>
@@ -70,20 +81,20 @@ const ContactUs = () => {
           <ul className="space-y-5 text-sm">
             <li className="flex items-start gap-3">
               <FiMapPin className="text-amber-400 mt-1" />
-              <span>123 Barber Street, Fade City, USA</span>
+              <span>Opposite M & M Event Centers High Court,Keffi,Nassarawa State </span>
             </li>
             <li className="flex items-start gap-3">
               <FiPhone className="text-amber-400 mt-1" />
-              <a href="tel:+1234567890" className="hover:underline">+1 (234) 567-890</a>
+              <a href="tel:+1234567890" className="hover:underline">07043136258</a>
             </li>
             <li className="flex items-start gap-3">
               <FaWhatsapp className="text-amber-400 mt-1" />
-              <a href="tel:+1234567890" className="hover:underline">+1 (234)2356464</a>
+              <a href="https://wa.me/08064380673" className="hover:underline">08064380673</a>
             </li>
             <li className="flex items-start gap-3">
               <FiMail className="text-amber-400 mt-1" />
-              <a href="mailto:info@fadecitybarbers.com" className="hover:underline">
-                info@fadecitybarbers.com
+              <a href="Ozigaguhillary25@gmail.com" className="hover:underline">
+                Ozigaguhillary25@gmail.com
               </a>
             </li>
             <li className="flex items-start gap-3">
@@ -108,7 +119,18 @@ const ContactUs = () => {
               />
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
-
+            <div>
+              <label className="block mb-1 text-sm font-medium">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                className={`w-full border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-amber-400`}
+                placeholder="I need to carve"
+              />
+              {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
+            </div>
             <div>
               <label className="block mb-1 text-sm font-medium">Email</label>
               <input

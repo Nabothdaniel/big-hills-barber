@@ -3,29 +3,92 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import Img1 from '../assets/images/service1.jpg'
-import Img2 from '../assets/images/service2.jpg'
-import Img3 from '../assets/images/service3.jpg'
-import Img4 from '../assets/images/service4.jpg'
-import Img5 from '../assets/images/service5.jpg'
+import Img1 from '../assets/images/hills-1.jpeg'
+import Img2 from '../assets/images/hills-2.jpeg'
+import Img3 from '../assets/images/hills-3.jpeg'
+import Img4 from '../assets/images/hills-4.jpeg'
+import Img5 from '../assets/images/hills-5.jpeg'
+import Img6 from '../assets/images/hill-6.jpeg'
+import Img7 from '../assets/images/hill7.jpeg'
+import Img8 from '../assets/images/hills-8.jpeg'
+import Img9 from '../assets/images/hills-9.jpeg'
+import Img10 from '../assets/images/hills-10.jpeg'
+import Img11 from '../assets/images/hills-11.jpeg'
+import Img12 from '../assets/images/hills-12.jpeg'
+import Img13 from '../assets/images/hills-13.jpeg'
+import Img14 from '../assets/images/hills-14.jpeg'
+import Img15 from '../assets/images/hills-15.jpeg'
+import Img16 from '../assets/images/hills-16.jpeg'
+import Img17 from '../assets/images/hills-17.jpeg'
+import Img18 from '../assets/images/hills-18.jpeg'
+import Img19 from '../assets/images/hills-19.jpeg'
+import Img20 from '../assets/images/hills-20.jpeg'
+import Img21 from '../assets/images/hills-21.jpeg'
 
 export default function OurWorks() {
   const works = [
     {
-      title: "Classic Taper Fade",
       image: Img1,
     },
     {
-      title: "Sharp Line Up",
       image: Img2,
     },
     {
-      title: "Modern Afro Fade",
+      image: Img3,
+    },
+    {
       image: Img4,
     },
     {
-      title: "Curly High Top",
       image: Img5,
+    },
+    {
+      image: Img6,
+    },
+    {
+      image: Img7,
+    },
+    {
+      image: Img8,
+    },
+    {
+      image: Img9,
+    },
+    {
+      image: Img10,
+    },
+    {
+      image: Img11,
+    },
+    {
+      image: Img12,
+    },
+    {
+      image: Img13,
+    },
+    {
+      image: Img14,
+    },
+    {
+      image: Img15,
+    },
+    {
+      image: Img16,
+    },
+    {
+      image: Img17,
+    },
+    {
+      image: Img18,
+    },
+    {
+      image: Img19,
+    },
+    {
+      image: Img20,
+    },
+    {
+      image: Img21,
     },
   ];
 
@@ -58,13 +121,8 @@ export default function OurWorks() {
                 <img
                   src={work.image}
                   alt={work.title}
-                  className="w-full h-64 object-cover rounded-t-xl"
+                  className="w-full h-[24rem] object-cover rounded-xl"
                 />
-                <div className="p-4 py-10 text-center ">
-                  <h3 className="text-lg font-semibold text-gray-700">
-                    {work.title}
-                  </h3>
-                </div>
               </div>
             </SwiperSlide>
           ))}

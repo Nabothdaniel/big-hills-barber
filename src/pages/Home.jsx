@@ -9,9 +9,9 @@ function Home() {
     <div className="">
      <Hero/>
      <AboutUs/>
+     <OurWorks/>
      <Services/>
      <AboutBigHills/>
-     <OurWorks/>
      <ContactUs/>
     </div>
   )

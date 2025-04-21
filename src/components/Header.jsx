@@ -7,7 +7,8 @@ import { FaUserTie } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 
 //logo img
-import HillsLogo from "../assets/images/hills-logo.jpeg";
+
+import Logo from "./utils/Logo";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -57,10 +58,7 @@ const Navbar = () => {
     <nav id="home" className="sticky z-[999] top-0 left-0 right-0 bg-[#212123] border-[#212123]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <ScrollLink to="home" smooth={true} duration={500} className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
-          <span className=" inline-flex  items-center gap-3 text-2xl font-semibold whitespace-nowrap text-white">
-          <img src={HillsLogo} alt="big hils logo" className="h-10 w-10 rounded-full object-cover"/>
-            Big Hills
-          </span>
+         <Logo/>
         </ScrollLink>
 
         {/* Toggle button */}

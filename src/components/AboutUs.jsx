@@ -1,15 +1,15 @@
-import Barber from '../assets/images/hills-about.jpeg';
+import Barber from '../assets/images/big-H.jpeg';
 const AboutUs = () => {
     return (
-        <div className='h-auto bg-primary p-10 md:px-0 md:py-20 flex flex-col md:flex-row  gap-3 md:gap-[5rem]' id='about'>
+        <div className='h-auto bg-primary p-10 px-0 md:px-0 md:py-20 flex flex-col md:flex-row  gap-3 md:gap-[5rem]' id='about'>
             <div>
-                <img src={Barber} alt="man barbing" className='md:h-[600px] md:w-[200rem] object-cover' />
+                <img src={Barber} alt="man barbing" className='md:h-[600px] h-[500px] w-full md:w-[200rem] bg-center  object-cover' />
             </div>
 
-            <div className="text-white md:mr-10 mt-5">
+            <div className="text-white px-10 md:mr-10 mt-5">
                 <div className='inline-flex items-center gap-3 font-bold'>
                     <span className='text-3xl md:4xl'>---</span>
-                    <h1 className='text-5xl my-2 '>About Us</h1>
+                    <h1 className='text-5xl my-2 fontbold '>About Us</h1>
                 </div>
                 <div>
                     <h1 className='text-4xl my-5'>Precision. Style. Confidence.</h1>
