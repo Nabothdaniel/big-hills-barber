@@ -117,7 +117,7 @@ export default function OurWorks() {
         >
           {works.map((work, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white  mx-[2rem] w-[80%] shadow-md rounded-xl  cursor-pointer hover:shadow-xl transition">
+              <div className="bg-white  mx-[.7remrem] w-[100%] md:w-full shadow-md rounded-xl  cursor-pointer hover:shadow-xl transition">
                 <img
                   src={work.image}
                   alt={work.title}

@@ -6,7 +6,7 @@ const AboutUs = () => {
                 <img src={Barber} alt="man barbing" className='md:h-[600px] h-[500px] w-full md:w-[200rem] bg-center  object-cover' />
             </div>
 
-            <div className="text-white px-10 md:mr-10 mt-5">
+            <div className="text-white px-5 md:mr-10 mt-5">
                 <div className='inline-flex items-center gap-3 font-bold'>
                     <span className='text-3xl md:4xl'>---</span>
                     <h1 className='text-5xl my-2 fontbold '>About Us</h1>
