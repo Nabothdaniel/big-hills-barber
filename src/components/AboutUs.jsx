@@ -1,4 +1,4 @@
-import Barber from '../assets/images/barber-1.jpg';
+import Barber from '../assets/images/hills-about.jpeg';
 const AboutUs = () => {
     return (
         <div className='h-auto bg-primary p-10 md:px-0 md:py-20 flex flex-col md:flex-row  gap-3 md:gap-[5rem]' id='about'>

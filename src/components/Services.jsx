@@ -5,45 +5,48 @@ import { EffectCards } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import { FaAccessibleIcon, FaChevronCircleRight, FaChevronRight } from "react-icons/fa";
-import { GiRazor, GiKidSlide } from "react-icons/gi";
+import {  FaChevronRight } from "react-icons/fa";
+
+
 
 //images import 
-import Img1 from '../assets/images/man1.jpg';
+import Img1 from '../assets/images/hills-10.jpeg';
 import Img2 from '../assets/images/barber-2.jpg';
 import Img4 from '../assets/images/barber4.jpg';
 import Img5 from '../assets/images/barber5.jpg';
+import Banner1 from '../assets/banners/banner1.png';
 
 const services = [
     {
         title: "Classic Haircut",
         description: "Precision cuts tailored to your style. Includes wash and style.",
-        price: "$25",
         icon: Img1,
     },
     {
         title: "Beard Trim",
         description: "Sharp lines and neat trims to keep your beard looking sharp.",
-        price: "$15",
-        icon: Img2,
+        icon: Img4,
     },
     {
         title: "Hot Towel Shave",
         description: "Relax with a traditional straight razor shave.",
-        price: "$20",
         icon: Img4,
     },
     {
         title: "Kids Cut",
         description: "Stylish and friendly cuts for kids of all ages.",
-        price: "$18",
-        icon: Img5,
+        icon: Img2,
+    },
+    {
+        title: "Dread Locks",
+        description: "Dread locks styling and maintenance.",
+        icon: Img2,
     },
 ];
 
 const Services = () => {
     return (
-        <section className="relative py-20 bg-[#fefefe] text-center" id="services">
+        <section className="relative py-20 bg-[#fefefe] text-center bg-no-repeat w-full bg-cover" id="services" style={{ backgroundImage: `url(${Banner1})` }}>
             {/*our word top */}
             <p className="absolute  top-[-2rem] z-10 left-[35rem] text-[7rem] font-bold  select-none">
                 {"Our".split("").map((letter, index) => (
@@ -68,7 +71,7 @@ const Services = () => {
                 ))}
             </p>
             {/* Actual content sits above the background word */}
-            <h2 className="relative z-10 text-3xl font-bold mb-10 text-gray-800">Our Services</h2>
+            <h2 className="relative block md:hidden z-10 text-3xl font-bold mb-10 text-gray-800">Our Services</h2>
 
             <div className="relative z-10 flex justify-center">
                 <Swiper
